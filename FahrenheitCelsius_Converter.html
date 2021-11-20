@@ -1,0 +1,54 @@
+<!-- Exercise 9.17:exercise_9-17.html -->
+<!-- Calculator to convert Fahrenheit to Celsius and Celsius to Fahrenheit -->
+   <head>
+         <meta charset = "utf-8">
+         <title>Exercise 9.17 : Fahrenheit / Celsius converter. </title>
+		 <h1>Calculator to convert Fahrenheit to Celsius and Celsius to Fahrenheit.</h1>
+		<script>
+
+			function convertToCelsius()
+			{
+				var form = document.getElementById( "conversionForm" );
+				var value = parseInt( form.fText.value );
+				form.cText.value = celsius( value );
+			} // convertToCelsius
+	
+			function celsius( fTemp )
+			{
+				return ( Math.floor( 5.0 / 9.0 *
+				( fTemp - 32 ) ) );
+			} // end function celsius
+	
+			function convertToFahrenheit()
+			{
+				var form = document.getElementById( "conversionForm" );
+				var value = parseInt( form.cText.value );
+				form.fText.value = fahrenheit( value );
+			} // end function convertToFahrenheit
+
+			function fahrenheit( cTemp )
+			{
+				return ( Math.floor( 9.0 / 5.0 * cTemp + 32 ) );
+			} // end function fahrenheit
+
+		</script>
+	</head>
+	<body>
+		<form id = "conversionForm" action = "">
+			<table border = "2">
+			<tr><td>Fahrenheit</td>
+				<td><input name = "fText" type = "text" /></td>
+				<td><input type = "button" value =
+					"Convert to Celsius" onclick =
+					"convertToCelsius()" /></td>
+			</tr>
+			<tr><td>Celsius</td>
+				<td><input name = "cText" type = "text" /></td>
+				<td><input type = "button" value =
+					"Convert to Fahrenheit" onclick =
+					"convertToFahrenheit()" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
