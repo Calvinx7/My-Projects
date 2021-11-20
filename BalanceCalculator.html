@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title> Balance Calculator for Customer </title>
+     <script>
+
+     // get account number
+     var AccountNumber = prompt("Enter AccountNumber");
+
+     //get balance at the beginning of month
+     var beginningbalance = prompt("Enter Balance at beginning of the month");
+     begbalance = parseInt(beginningbalance);
+
+    //get total charge
+    var getcharges = prompt("Enter Total of items charged by this month");
+    charges = parseInt(getcharges);
+
+    //get credits applied
+    var getcredits = prompt("Enter Total of all credits this month");
+    credits = parseInt(getcredits);
+
+    //get credit limit
+    var getcreditlimit = prompt("Enter credit limit");
+    creditlimit = parseInt(getcreditlimit);
+
+    //calculate balance
+    var newbalance = begbalance+charges-credits;
+
+    </script>
+
+  </head>
+<body>
+
+    <script>
+    document.write(" New Balance: "+newbalance+"<br><br>");
+
+    if(newbalance>creditlimit){
+    document.write("Credit limit exceeded.<br>");
+     }
+
+    </script>
+
+   </body>
+
+</html>
